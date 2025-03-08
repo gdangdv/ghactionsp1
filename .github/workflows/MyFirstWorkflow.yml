@@ -35,6 +35,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
+      - name: Tag is true
+        if: inputs.tag == true
+        run: |
+          echo "Tagging is enabled."
+
+      - name: Tag is false
+        if: inputs.tag == false
+        run: |
+          echo "Tagging is disabled."
+
       - run: |
           echo "Homedrive: ${{ inputs.homedrive }}"
           echo "Log level: ${{ inputs.logLevel }}"
