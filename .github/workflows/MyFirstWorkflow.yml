@@ -23,7 +23,8 @@ on:
         - debug 
       tag:
         description: 'Apply tag after successfull test run'
-        required: true 
+        required: true
+        default: true
         type: boolean 
       environment:
         description: 'Environment to run tests against'
