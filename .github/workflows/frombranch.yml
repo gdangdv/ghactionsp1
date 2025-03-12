@@ -12,7 +12,7 @@ jobs:
           BASE_REF: ${{ github.base_ref }}
         run: | 
           echo "HEAD_REF=${HEAD_REF}" >> "${GITHUB_ENV}"
-          echo "BASE_REF=${BASE_REF}" >> "${GITHUB_ENV}
+          echo "BASE_REF=${BASE_REF}" >> "${GITHUB_ENV}"
 
       - run: echo "Hello from branch workflow"
 
