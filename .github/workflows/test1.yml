@@ -2,9 +2,11 @@ name: test1
 run-name: test1 ${{ github.event_name }} by @${{ github.actor }}
 on:
   push:
-    branches:
-    - main
-    - release/*
+    #branches:
+    #  - main
+    #  - release/*
+    paths:
+      - doc/*
   workflow_dispatch:
 
 jobs:
