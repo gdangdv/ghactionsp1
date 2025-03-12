@@ -1,5 +1,8 @@
-# Add 'repo' label to any root file changes
+# More comprehensive example
 repo:
-  - "*"
-  - ".*"  # Also match hidden files (like .gitignore, .env)
-  - "*/*" # Match subdirectories (optional)
+  - '*'         # All files in the root directory
+  - '!*.md'     # Exclude markdown files
+
+documentation:
+  - '**/*.md'   # All markdown files in any directory
+  - 'docs/**/*' # Everything in the docs directory
