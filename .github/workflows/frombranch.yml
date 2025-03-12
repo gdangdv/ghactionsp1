@@ -6,10 +6,14 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: set env varaibles
+        run: |
+          echo "HEAD_REF=${{ github.head_ref }}" >> $GITHUB_ENV
+          echo "BASE_REF=${{ github.base_ref }}" >> $GITHUB_ENV
       - run: echo "Hello wrom branch workflow"
       - run: |
           echo "Event: ${{ github.event_name }}"
-          echo "Base: ${{ github.base_ref }}"
-          echo "Head: ${{ github.head_ref }}"
+          echo "Base: $BASE_REF"
+          echo "Head: $HEAD_REF"
           echo "Ref: ${{ github.ref }}"
           echo "Workflow: ${{ github.workflow_ref }}"
