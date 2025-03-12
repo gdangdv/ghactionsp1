@@ -6,7 +6,7 @@ on:
       - main
       - release/*
     paths:
-      - doc/**
+      - 'doc/**'
   workflow_dispatch:
 
 jobs:
