@@ -1,3 +1,5 @@
 # Add 'repo' label to any root file changes
 repo:
-- '*'
+  - "*"
+  - ".*"  # Also match hidden files (like .gitignore, .env)
+  - "*/*" # Match subdirectories (optional)
